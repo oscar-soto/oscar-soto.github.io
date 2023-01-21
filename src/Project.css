@@ -1,0 +1,95 @@
+.project__card--link a img {
+  display: none;
+}
+.project__card--link a:first-child img {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .project__card:nth-child(2n) .project__card--link {
+    order: 2;
+    left: 0;
+    right: 50px;
+  }
+  .project__card:nth-child(2n) .project__card--link::after {
+    content: "";
+    position: absolute;
+    bottom: -36px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    border-right: 2px solid #00000080;
+    border-bottom: 2px solid #00000080;
+    transition: 0.3s all ease-in-out;
+    z-index: -1;
+  }
+  .project__card:nth-child(2n) .project__card--link:hover::after {
+    bottom: -16px;
+    right: 0;
+  }
+  .project__card:nth-child(2n) .project__card--content {
+    order: 1;
+    left: 50px;
+    right: 0;
+    text-align: left;
+  }
+  .project__card:nth-child(2n) .project__card--content h3 {
+    text-align: left;
+  }
+
+  .project__card:nth-child(2n + 1) .project__card--link {
+    order: 2;
+    left: 0;
+    right: 50px;
+  }
+  .project__card:nth-child(2n + 1) .project__card--link::after {
+    content: "";
+    position: absolute;
+    bottom: -36px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #00000080;
+    border-bottom: 2px solid #00000080;
+    transition: 0.3s all ease-in-out;
+    z-index: -1;
+  }
+
+  .project__card:nth-child(2n + 1) .project__card--link:hover::after {
+    bottom: -16px;
+    left: 0;
+  }
+
+  .project__card--link {
+    order: 1;
+    position: relative;
+    left: 50px;
+  }
+
+  .project__card--link::before {
+    content: "";
+    background-color: #e5e7eb;
+    position: absolute;
+    width: calc(100% - 32px);
+    left: 16px;
+    height: 100%;
+    top: 0;
+    opacity: 0.5;
+    transition: 0.3s all ease-in-out;
+    visibility: visible;
+    z-index: 1;
+  }
+  .project__card--link:hover::before {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+
+  .project__card--content {
+    position: relative;
+    right: 50px;
+    text-align: right;
+    order: 2;
+    z-index: 2;
+  }
+}

@@ -1,20 +1,9 @@
-import React from 'react';
 import { Title } from './Title';
+import { getImgUrl } from '../helpers/getImgUrl';
+import technologies from '../data/technologies';
 
-import meImage from '../assets/image/oscar.jpg';
 
 export const About = () => {
-  const technologies = [
-    'HTML',
-    'CSS',
-    'JavaScript (ES6+)',
-    'Bootstrap',
-    'Sass',
-    'Tailwind',
-    'React.js',
-    'Vue.js',
-  ];
-
   return (
     <section id="about" className="about container mx-auto px-8 py-36">
       <Title>Sobre Mí</Title>
@@ -56,7 +45,7 @@ export const About = () => {
         >
           <div
             className="about__img flex-none hidden md:block md:w-4/12 relative px-4 mx-auto"
-            style={{ backgroundImage: `url(${meImage})` }}
+            style={{ backgroundImage: `url(${getImgUrl('oscar.jpg')})` }}
           ></div>
         </div>
       </div>

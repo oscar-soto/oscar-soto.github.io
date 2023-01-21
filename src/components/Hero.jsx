@@ -1,11 +1,12 @@
-import heroImage from '../assets/image/hero.jpeg';
+import { getImgUrl } from "../helpers/getImgUrl";
 export const Hero = () => {
+  
   return (
     <section
       id="hero"
       className="hero"
       style={{
-        backgroundImage: `url(${heroImage})`,
+        backgroundImage: `url(${getImgUrl('hero.jpeg')})`,
       }}
     >
       <div className="hero__container container mx-auto h-screen py-8 px-4 flex items-center justify-center md:block md:h-full md:px-8 md:py-36">
