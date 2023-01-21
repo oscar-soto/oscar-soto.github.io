@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* General */
 html,body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
+/* Hero Section */
 .hero {
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,4 +18,31 @@ html,body {
 .hero h1 {
   position: relative;
   left: -0.5rem;
+}
+
+/* About section */
+.about__img {
+  background-color: #1f293780;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: 50%;
+  height: 280px;
+  width: 280px;
+  position: absolute;
+}
+
+.about__content--list {
+  column-count: 2;
+}
+
+.about__content--list li {
+  position: relative;
+}
+
+.about__content--list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
 }
