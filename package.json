@@ -1,5 +1,5 @@
 {
-  "homepage": "https://oscar-soto.github.io/",
+  "homepage": "https://oscar-soto.github.io",
   "name": "portafolio",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview"
   },
